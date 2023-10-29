@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    
+    <h1 id="heading">TASKS MANAGER</h1>
+    <div class="box">
+      
+        <% for (const task of tasks) { %>
+           <div class="item"> <input type="checkbox"> <p><%=task%></p></div>
+        <% } %>
+   
+    </div>
+
+    <form action="/" method="post">
+      <input type="text" name="task" placeholder="hi" id="task" />
+      <button type="submit">+</button>
+  
+    </form>
+    <form method="post" action="/clear"><button type="submit">X</button></form>
+  </body>
+
+</html>
